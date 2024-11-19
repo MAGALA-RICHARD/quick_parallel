@@ -29,7 +29,6 @@ class TestQuickParallel(unittest.TestCase):
     def test_quick_parallel_processes(self):
         """Test quick_parallel using processes."""
 
-        # Define a sample function
 
         iterable = [1, 2, 3]
 
