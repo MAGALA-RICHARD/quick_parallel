@@ -17,7 +17,7 @@ class TestQuickParallel(unittest.TestCase):
         with patch('process.select_type', return_value=ThreadPoolExecutor(max_workers=2)), \
                 patch('process.tqdm', side_effect=tqdm) as mock_tqdm:
             # Execute quick_parallel
-            results = list(quick_parallel(sample_func, iterable, use_thread=True, n_workers=2))
+            results = [i for i in quick_parallel(sample_func, iterable, use_thread=True, n_workers=2)]
 
             # Validate results
             self.assertEqual(bool(results), True)
@@ -36,7 +36,7 @@ class TestQuickParallel(unittest.TestCase):
         with patch('process.select_type', return_value=ProcessPoolExecutor(max_workers=2)), \
                 patch('process.tqdm', side_effect=tqdm) as mock_tqdm:
             # Execute quick_parallel
-            results = list(quick_parallel(sample_func, iterable, use_thread=False, n_workers=2))
+            results = [ i for i in quick_parallel(sample_func, iterable, use_thread=False, n_workers=2)]
 
             # Validate results
             self.assertEqual(bool(results), True)
@@ -56,7 +56,7 @@ class TestQuickParallel(unittest.TestCase):
         with patch('process.select_type', return_value=ThreadPoolExecutor(max_workers=2)), \
                 patch('process.tqdm', side_effect=tqdm) as mock_tqdm:
             # Execute quick_parallel with an extra argument
-            results = list(quick_parallel(sample_func_w_args, iterable, 3, use_thread=True, n_workers=2))
+            results = [i for i in quick_parallel(sample_func_w_args, iterable, 3, use_thread=True, n_workers=2)]
 
             # Validate results
             self.assertEqual(bool(results), True)
