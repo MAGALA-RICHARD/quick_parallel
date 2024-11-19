@@ -1,0 +1,10 @@
+README.rst
+setup.py
+quick_parallel/__init__.py
+quick_parallel/examples.py
+quick_parallel/process.py
+quick_parallel.egg-info/PKG-INFO
+quick_parallel.egg-info/SOURCES.txt
+quick_parallel.egg-info/dependency_links.txt
+quick_parallel.egg-info/requires.txt
+quick_parallel.egg-info/top_level.txt
