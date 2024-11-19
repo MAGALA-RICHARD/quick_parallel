@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 VERSION = '0.0.1.2'
-DESCRIPTION = 'quick parallel set up library'
+DESCRIPTION = 'quick parallel process set up library'
 LONG_DESCRIPTION = 'parallelize your function with ease, no need to be a master of parallelization'
 
 with open('README.rst') as readme_file:
