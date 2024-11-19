@@ -85,6 +85,12 @@ def worker(x):
     return x ** 3 * 2
 
 
+def sample_func(x):
+    return x * 2
+
+def sample_func_w_args(x, p):
+            return x ** p
+
 if __name__ == '__main__':
     lp = [(-92.70166631, 42.26139442), (-92.69581474, 42.26436962), (-92.64634469, 42.33703225)]
     gen_d = (i for i in range(1000))
