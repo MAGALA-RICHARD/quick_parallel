@@ -28,8 +28,5 @@ setup(
         "Operating System :: POSIX :: Linux",
     ],
     python_requires=">=3.4",
-    install_requires=[
-        'tqdm >= 4.66.2',
 
-    ]
 )
